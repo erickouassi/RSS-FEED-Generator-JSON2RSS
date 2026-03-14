@@ -21,7 +21,17 @@
     "copyright": "&#xA9; 2026 Podcast Creator",
     "lastBuildDate": "Thu, 26 Feb 2026 09:00:00 -0500",
     "podcastGuid": "opencast-show-guid-001",
-    "locked": "yes"
+    "locked": "yes",
+    "funding": [
+  {
+    "url": "https://www.patreon.com/yourpodcast",
+    "text": "Support the Show"
+  },
+  {
+    "url": "https://buymeacoffee.com/yourpodcast",
+    "text": "Buy Me a Coffee"
+  }
+]
   },
 
   "episodes": [
