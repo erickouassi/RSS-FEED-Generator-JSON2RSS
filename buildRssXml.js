@@ -34,6 +34,18 @@ export function buildRssXml(channel, episodes) {
     )
     .join("");
 
+  const fundingXml = channel.funding
+    ? channel.funding
+        .map(
+          (f) => `
+    <podcast:funding url="${f.url}">
+      ${f.text}
+    </podcast:funding>
+  `
+        )
+        .join("")
+    : "";
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
@@ -71,6 +83,8 @@ export function buildRssXml(channel, episodes) {
 
     <copyright>${channel.copyright}</copyright>
     <lastBuildDate>${channel.lastBuildDate}</lastBuildDate>
+
+    ${fundingXml}
 
     ${itemsXml}
 
